@@ -17,3 +17,15 @@ ctx.beginPath();
 ctx.lineTo(x, y);
 ctx.moveTo(x, y);
 ctx.stroke();
+
+// write the draw function
+
+// handle the keys
+const handleKey = e => {
+  if (e.key.includes('Arrow')) {
+    e.preventDefault();
+  }
+};
+
+// listen for key press
+window.addEventListener('keydown', handleKey);
