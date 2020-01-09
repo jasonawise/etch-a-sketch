@@ -58,5 +58,19 @@ const handleKey = e => {
   }
 };
 
+// shake
+const clearCanvas = () => {
+  canvas.classList.add('shake');
+  ctx.clearRect(0, 0, width, height);
+  canvas.addEventListener(
+    'animationend',
+    function() {
+      canvas.classList.remove('shake');
+    },
+    { once: true }
+  );
+};
+
 // listen for key press
 window.addEventListener('keydown', handleKey);
+shakebutton.addEventListener('click', clearCanvas);
